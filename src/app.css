@@ -1,0 +1,46 @@
+:root {
+  background-color: #1b1b1b;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.grid-list {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .grid-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .grid-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .grid-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@keyframes -global-from-left {
+  0% {
+    transform: rotateX(50deg) translateX(-200vw) skewX(-50deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
